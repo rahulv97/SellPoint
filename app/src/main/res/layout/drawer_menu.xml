@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/sellpointbg"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/app_ic_t"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/shop_name"
+        android:layout_below="@id/img"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="@string/app_name"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="15dp"
+        android:textSize="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/devExp"
+        android:layout_below="@id/shop_name"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Expiry Date: "
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="15dp"
+        android:textSize="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/devider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_below="@id/devExp"
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="15dp"/>
+
+    <TextView
+        android:id="@+id/dashAvlStock"
+        android:layout_below="@id/devider"
+        android:textColor="@color/white"
+        android:text="Available Stock"
+        android:paddingHorizontal="15dp"
+        android:textSize="16dp"
+        android:drawableLeft="@mipmap/available_stock"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/dashSoldlStock"
+        android:layout_below="@id/dashAvlStock"
+        android:textColor="@color/white"
+        android:text="Sold Items"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="15dp"
+        android:textSize="16dp"
+        android:drawableLeft="@mipmap/sold_out"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/dashPurchasedStock"
+        android:layout_below="@id/dashSoldlStock"
+        android:textColor="@color/white"
+        android:text="Purchased Items"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="15dp"
+        android:textSize="16dp"
+        android:drawableLeft="@mipmap/purchased"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/dashPurchaseNew"
+        android:layout_below="@id/dashPurchasedStock"
+        android:textColor="@color/white"
+        android:text="Add New Purchase"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="15dp"
+        android:textSize="16dp"
+        android:drawableLeft="@mipmap/buy"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/dashChangePass"
+        android:layout_below="@id/dashPurchaseNew"
+        android:textColor="@color/white"
+        android:text="Change Password"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="15dp"
+        android:textSize="16dp"
+        android:drawableLeft="@mipmap/code"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/dashEditProfile"
+        android:layout_below="@id/dashChangePass"
+        android:textColor="@color/white"
+        android:text="My Profile"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="15dp"
+        android:textSize="16dp"
+        android:drawableLeft="@mipmap/edit_profile"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/dashBanner"
+        android:layout_below="@id/dashEditProfile"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:text="Manage Banners"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="15dp"
+        android:textSize="16dp"
+        android:drawableLeft="@mipmap/slider"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/dashTransactions"
+        android:layout_below="@id/dashEditProfile"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        android:text="Transactions"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="15dp"
+        android:textSize="16dp"
+        android:drawableLeft="@mipmap/ledger"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/white"
+        android:text="Logout"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="15dp"
+        android:textSize="16dp"
+        android:drawableLeft="@mipmap/logout"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@drawable/sellpointbg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SellProductActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/back_btn"/>
+        <TextView
+            android:id="@+id/saleHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sale Product"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:padding="20dp"
+        android:id="@+id/buyerInfoLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buyer Details"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etBuyerName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/et_bg"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:hint="Buyer Name"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="15dp"/>
+
+        <EditText
+            android:id="@+id/etBuyerMob"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/et_bg"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:hint="Mobile"
+            android:inputType="number"
+            android:paddingHorizontal="15dp"/>
+
+        <EditText
+            android:id="@+id/etBuyerAltName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/et_bg"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:hint="Alternate Mobile"
+            android:inputType="number"
+            android:paddingHorizontal="15dp"/>
+
+        <EditText
+            android:id="@+id/etBuyerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/et_bg"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="15dp"/>
+
+        <EditText
+            android:id="@+id/etSellingPrice"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/et_bg"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:hint="Selling Price"
+            android:inputType="numberDecimal"
+            android:paddingHorizontal="15dp"/>
+
+        <EditText
+            android:id="@+id/etBuyerNote"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/et_bg"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:hint="Note (optional)"
+            android:inputType="text"
+            android:paddingHorizontal="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID Proof 1"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/list_stroke">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_centerInParent="true"
+                android:text="Select Photo"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/etBuyerID1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID Proof 2"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/list_stroke">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_centerInParent="true"
+                android:text="Select Photo"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/etBuyerID2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile Photo"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/list_stroke">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_centerInParent="true"
+                android:text="Select Photo"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/buyerImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:background="@drawable/et_bg"
+            android:backgroundTint="#6D0000"/>
+    </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>

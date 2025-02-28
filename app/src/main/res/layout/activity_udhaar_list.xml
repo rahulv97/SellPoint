@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sellpointbg"
+    tools:context=".activities.UdhaarListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/back_btn"
+                android:padding="10dp"/>
+            <TextView
+                android:id="@+id/listHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:text="Unpaid"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/udhaarCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="0"
+                android:layout_toLeftOf="@id/refreshBtn"
+                android:layout_marginRight="5dp"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/refreshBtn"
+                android:layout_alignParentRight="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/reload_ic"
+                android:padding="12dp"/>
+
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/search_editText"
+            android:paddingHorizontal="15dp"
+            android:inputType="textPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/white"
+            android:background="@drawable/et_bg"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Search..."
+            android:drawableRight="@drawable/search_ic"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/udhaarRecycler"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</RelativeLayout>

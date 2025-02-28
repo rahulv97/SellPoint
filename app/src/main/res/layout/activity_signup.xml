@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sellpointbg"
+    tools:context=".activities.SignupActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/back_btn"/>
+        <TextView
+            android:id="@+id/profileHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Signup"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/profileImg"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/signup_img"/>
+
+            <EditText
+                android:id="@+id/shopName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/et_bg"
+                android:textColor="@color/white"
+                android:textColorHint="#C1C1C1"
+                android:hint="Shop Name"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="15dp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/fullName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/et_bg"
+                android:textColor="@color/white"
+                android:textColorHint="#C1C1C1"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/et_bg"
+                android:textColor="@color/white"
+                android:textColorHint="#C1C1C1"
+                android:hint="Mobile Number"
+                android:inputType="number"
+                android:paddingHorizontal="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/et_bg"
+                android:textColor="@color/white"
+                android:textColorHint="#C1C1C1"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/etPass"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/et_bg"
+                android:textColor="@color/white"
+                android:textColorHint="#C1C1C1"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingHorizontal="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <CheckBox
+                android:id="@+id/passCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="Show/Hide Password"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/expDateHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expiry Date"
+                android:textColor="#E6E6E6"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/expiryDate"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/et_bg"
+                android:textColor="@color/white"
+                android:textColorHint="#C1C1C1"
+                android:text="Expiry Date"
+                android:gravity="center_vertical"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signupBtn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:text="Signup"
+                android:textColor="@color/white"
+                android:background="@drawable/et_bg"
+                android:backgroundTint="#6D0000"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sellpointbg"
+    tools:context=".activities.NewPurchaseActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/back_btn"/>
+        <TextView
+            android:id="@+id/purchaseHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Purchase"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Details"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/et_bg"
+                android:layout_marginTop="5dp"
+                android:paddingHorizontal="15dp"
+                android:id="@+id/categoriesSpinner"/>
+
+            <EditText
+                android:id="@+id/etItemname"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/et_bg"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"
+                android:hint="Item Name"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="15dp"/>
+
+            <EditText
+                android:id="@+id/etProductPrice"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/et_bg"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"
+                android:hint="Purchase Price (₹)"
+                android:paddingHorizontal="15dp"/>
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/et_bg"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"
+                android:hint="Description"
+                android:paddingHorizontal="15dp"/>
+
+            <EditText
+                android:id="@+id/uid1"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/et_bg"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"
+                android:inputType="text"
+                android:hint="UID 1"
+                android:paddingHorizontal="15dp"/>
+
+            <EditText
+                android:id="@+id/uid2"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/et_bg"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:inputType="text"
+                android:textColorHint="@color/grey"
+                android:hint="UID 2"
+                android:paddingHorizontal="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bill Photo (optional)"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/list_stroke">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_centerInParent="true"
+                    android:text="Select Photo"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:id="@+id/imgBillPic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+                    
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seller Details"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etSellerName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/et_bg"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"
+                android:hint="Seller Name"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="15dp"/>
+
+            <EditText
+                android:id="@+id/etSellerMobile"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/et_bg"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"
+                android:hint="Mobile"
+                android:inputType="number"
+                android:paddingHorizontal="15dp"/>
+
+            <EditText
+                android:id="@+id/etSellerAltMobile"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/et_bg"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"
+                android:hint="Alternate Mobile"
+                android:inputType="number"
+                android:paddingHorizontal="15dp"/>
+
+            <EditText
+                android:id="@+id/etSellerEmail"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/et_bg"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="15dp"/>
+
+            <EditText
+                android:id="@+id/sellerRemarks"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/et_bg"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"
+                android:hint="Remarks"
+                android:inputType="text"
+                android:paddingHorizontal="15dp"/>
+
+            <TextView
+                android:id="@+id/warrantyDate"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/et_bg"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey"
+                android:text="Warranty Date"
+                android:gravity="center_vertical"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID Proof 1 (optional)"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/list_stroke">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_centerInParent="true"
+                    android:text="Select Photo"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:id="@+id/imgProof1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID Proof 2 (optional)"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/list_stroke">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_centerInParent="true"
+                    android:text="Select Photo"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:id="@+id/imgProof2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seller Photo (optional)"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/list_stroke">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_centerInParent="true"
+                    android:text="Select Photo"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:id="@+id/imgSeller"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/signText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seller Signature"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:id="@+id/signRL"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/list_stroke">
+
+                <!--<com.github.gcacace.signaturepad.views.SignaturePad
+                    android:id="@+id/signaturePad"
+                    android:layout_width="800dp"
+                    android:layout_height="600dp"
+                    app:penColor="@color/black"/>-->
+
+                <se.warting.signatureview.views.SignaturePad
+                    android:id="@+id/signaturePad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:penColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/resetSign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reset"
+                    android:textColor="@color/bluetheme"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:gravity="center"
+                    android:paddingVertical="5dp"
+                    android:background="@drawable/et_bg"/>
+
+            </RelativeLayout>
+
+<!--     Buyer Information       -->
+
+           <LinearLayout
+               android:id="@+id/buyerInfoLinear"
+               android:visibility="gone"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Buyer Details"
+                   android:textColor="@color/white"
+                   android:textSize="16dp"
+                   android:layout_marginTop="20dp"
+                   android:textStyle="bold"/>
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="45dp"
+                   android:background="@drawable/et_bg"
+                   android:layout_marginTop="15dp"
+                   android:textColor="@color/white"
+                   android:textColorHint="@color/grey"
+                   android:hint="Buyer Name"
+                   android:inputType="textPersonName"
+                   android:paddingHorizontal="15dp"/>
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="45dp"
+                   android:background="@drawable/et_bg"
+                   android:layout_marginTop="15dp"
+                   android:textColor="@color/white"
+                   android:textColorHint="@color/grey"
+                   android:hint="Mobile"
+                   android:inputType="number"
+                   android:paddingHorizontal="15dp"/>
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="45dp"
+                   android:background="@drawable/et_bg"
+                   android:layout_marginTop="15dp"
+                   android:textColor="@color/white"
+                   android:textColorHint="@color/grey"
+                   android:hint="Alternate Mobile"
+                   android:inputType="number"
+                   android:paddingHorizontal="15dp"/>
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="45dp"
+                   android:background="@drawable/et_bg"
+                   android:layout_marginTop="15dp"
+                   android:textColor="@color/white"
+                   android:textColorHint="@color/grey"
+                   android:hint="Email"
+                   android:inputType="textEmailAddress"
+                   android:paddingHorizontal="15dp"/>
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="45dp"
+                   android:background="@drawable/et_bg"
+                   android:layout_marginTop="15dp"
+                   android:textColor="@color/white"
+                   android:textColorHint="@color/grey"
+                   android:hint="Address (optional)"
+                   android:inputType="text"
+                   android:paddingHorizontal="15dp"/>
+
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="45dp"
+                   android:background="@drawable/et_bg"
+                   android:layout_marginTop="15dp"
+                   android:textColor="@color/white"
+                   android:textColorHint="@color/grey"
+                   android:hint="Note (optional)"
+                   android:inputType="text"
+                   android:paddingHorizontal="15dp"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="ID Proof 1"
+                   android:textColor="@color/white"
+                   android:textSize="16dp"
+                   android:layout_marginTop="20dp"
+                   android:textStyle="bold"/>
+
+               <RelativeLayout
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:layout_marginTop="10dp"
+                   android:background="@drawable/list_stroke">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="10dp"
+                       android:layout_centerInParent="true"
+                       android:text="Select Photo"
+                       android:textColor="@color/white"/>
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:scaleType="centerCrop"/>
+
+               </RelativeLayout>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="ID Proof 2"
+                   android:textColor="@color/white"
+                   android:textSize="16dp"
+                   android:layout_marginTop="20dp"
+                   android:textStyle="bold"/>
+
+               <RelativeLayout
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:layout_marginTop="10dp"
+                   android:background="@drawable/list_stroke">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="10dp"
+                       android:layout_centerInParent="true"
+                       android:text="Select Photo"
+                       android:textColor="@color/white"/>
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:scaleType="centerCrop"/>
+
+               </RelativeLayout>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Profile Photo"
+                   android:textColor="@color/white"
+                   android:textSize="16dp"
+                   android:layout_marginTop="20dp"
+                   android:textStyle="bold"/>
+
+               <RelativeLayout
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:layout_marginTop="10dp"
+                   android:background="@drawable/list_stroke">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="10dp"
+                       android:layout_centerInParent="true"
+                       android:text="Select Photo"
+                       android:textColor="@color/white"/>
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:scaleType="centerCrop"/>
+
+               </RelativeLayout>
+           </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="50dp"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:background="@drawable/et_bg"
+                android:backgroundTint="#6D0000"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

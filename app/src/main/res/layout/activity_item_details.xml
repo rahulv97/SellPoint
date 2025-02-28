@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sellpointbg"
+    tools:context=".activities.ItemDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/back_btn"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Details"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/edit_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/edit_ic"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/list_stroke"
+        android:layout_margin="20dp"
+        android:padding="15dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_toLeftOf="@id/wrImg"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/itemName"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="iPhone 15 Pro"
+                android:textSize="24dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/purDate"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Purchased On: 26 Nov 2024"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/warDate"
+                android:textColor="@color/white"
+                android:layout_marginVertical="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Warranty: 26 Nov 2024"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/purPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="₹50000"
+                android:textSize="24dp"
+                android:textColor="#FD5A0D"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/wrImg"
+            android:layout_width="80dp"
+            android:padding="10dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/warranty_ic"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/sellerTab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/filled_et_bg"
+            android:text="Seller Info"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/buyerTab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/et_bg"
+            android:text="Buyer Info"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/secondaryColor"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sellerInfoLay"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@drawable/list_stroke"
+        android:layout_margin="20dp"
+        android:padding="15dp"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/sellerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rahul"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doraha"
+                    android:textSize="14dp"
+                    android:textColor="@color/white"/>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile:"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/sellerMobile"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="7894561230"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Alt. Mobile:"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/sellerAltMobile"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="7894561230"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email:"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/sellerMail"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ancsdf@gmail.com"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Item Details:"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/itemDesc"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="White Color"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Notes:"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/sellerNote"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="All Condition is ok"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Unique Identity 1"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/uid1"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="uid1"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Unique Identity 2"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/uid2"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="uid2"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:text="Seller Photo"
+                        android:paddingHorizontal="5dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:text="ID Proof 1"
+                        android:paddingHorizontal="5dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:text="ID Proof 2"
+                        android:paddingHorizontal="5dp"
+                        android:layout_weight="1"/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/list_stroke"
+                        android:backgroundTint="@color/white"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/sellerPic"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/list_stroke"
+                        android:backgroundTint="@color/white"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/idproof1"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/list_stroke"
+                        android:backgroundTint="@color/white"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/idproof2"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:text="Signature"
+                        android:paddingHorizontal="5dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:text="Bill Photo"
+                        android:paddingHorizontal="5dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:paddingHorizontal="5dp"
+                        android:layout_weight="1"/>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/list_stroke"
+                        android:backgroundTint="@color/white"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/sign"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/list_stroke"
+                        android:backgroundTint="@color/white"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/bill"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"/>
+                </LinearLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@drawable/et_bg"
+                    android:text="View Purchase Agreement"
+                    android:textColor="#43B7FF"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/handshake_ic"
+                    android:drawablePadding="5dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingHorizontal="20dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/saleBtn1"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Sale Now"
+                    android:textColor="@color/white"
+                    android:background="@drawable/et_bg"
+                    android:backgroundTint="#6D0000"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buyerInfoLay"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@drawable/list_stroke"
+        android:layout_margin="20dp"
+        android:padding="15dp"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/buyerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arun Kumar"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"/>
+
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile:"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/buyerPhone"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="7894561230"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Alt. Mobile:"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/buyerAltPhone"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="7894561230"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email:"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/buyerEmail"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ancsdf@gmail.com"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sold On:"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/sellingDate"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="20 Nov 2024"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sale Price:"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/salePrice"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="₹1000"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Buyer Note:"
+                        android:textSize="14dp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/buyerNote"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="₹1000"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:text="Buyer Photo"
+                        android:paddingHorizontal="5dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:text="ID Proof 1"
+                        android:paddingHorizontal="5dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:text="ID Proof 2"
+                        android:paddingHorizontal="5dp"
+                        android:layout_weight="1"/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/list_stroke"
+                        android:backgroundTint="@color/white"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/buyerPic"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/list_stroke"
+                        android:backgroundTint="@color/white"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/buyer_idproof1"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/list_stroke"
+                        android:backgroundTint="@color/white"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/buyer_idproof2"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:visibility="gone"
+                    android:background="@drawable/et_bg"
+                    android:text="View Sold Agreement"
+                    android:textColor="#43B7FF"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/handshake_ic"
+                    android:drawablePadding="5dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingHorizontal="20dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/editSellerBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Edit Buyer"
+                    android:textColor="@color/white"
+                    android:background="@drawable/et_bg"
+                    android:backgroundTint="#6D0000"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/list_stroke"
+    android:layout_margin="20dp"
+    android:padding="15dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/item">
+
+    <LinearLayout
+        android:layout_toLeftOf="@id/wrImg"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/prodName"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="iPhone 15 Pro"
+            android:textSize="24dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/creationDate"
+            android:textColor="@color/white"
+            android:layout_marginVertical="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Purchased On: 26 Nov 2024"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/prodPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="₹50000"
+            android:textSize="24dp"
+            android:textColor="#FD5A0D"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/wrImg"
+        android:layout_width="80dp"
+        android:padding="10dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/warranty_ic"/>
+
+</RelativeLayout>
